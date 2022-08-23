@@ -1,0 +1,258 @@
+.callback {
+  background-image: url("../img/background/background-vector-callback.png");
+  background-position: left -76px;
+  background-repeat: no-repeat;
+  background-size: 979px 917px;
+  padding-top: 162px;
+  padding-right: 50px;
+  padding-bottom: 248px;
+  padding-left: 50px;
+  background-color: $color-deepskyblue;
+
+  @include vp-1023 {
+    background-image: none;
+    padding: 0;
+    padding-top: 41px;
+    padding-bottom: 124px;
+  }
+
+  @include vp-769 {
+    padding-top: 47px;
+    padding-bottom: 90px;
+  }
+}
+
+.callback__wrapper {
+  display: flex;
+
+  @include vp-1023 {
+    display: block;
+  }
+}
+
+.callback img {
+  max-width: 510px;
+  min-width: 310px;
+  height: 285px;
+  object-fit: contain;
+  margin-top: 84px;
+  margin-right: 20px;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.callback__form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.callback form {
+  margin-left: auto;
+  margin-right: 10px;
+
+  @include vp-1023 {
+    margin: 0;
+  }
+}
+
+.callback strong {
+  margin-bottom: 9px;
+  margin-left: -5px;
+  display: block;
+  font-family: $ff-roboto-condensed;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 3px;
+    margin-left: 0;
+  }
+
+  @include vp-769 {
+    margin-bottom: 7px;
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.callback p {
+  margin: 0;
+  margin-bottom: 33px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 24px;
+  }
+
+  @include vp-769 {
+    margin-bottom: 33px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.callback__input-wrapper {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+
+  @include vp-769 {
+    width: 100%;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
+
+.callback input {
+  padding: 16px;
+  min-width: 270px;
+  background-color: rgba($color-blackpearl, 0.15);
+  color: $color-blackpearl;
+  border: none;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color-blackpearl, 0.3);
+  }
+}
+
+.callback textarea {
+  padding: 25px 15px;
+  min-width: 580px;
+  min-height: 155px;
+  background-color: rgba($color-blackpearl, 0.15);
+  color: $color-blackpearl;
+  border: none;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color-blackpearl, 0.3);
+  }
+
+  @include vp-1023 {
+    padding-top: 33px;
+    width: 100%;
+  }
+
+  @include vp-769 {
+    padding-top: 25px;
+    min-width: 270px;
+    min-height: 180px;
+  }
+}
+
+.callback__textarea {
+  margin-bottom: 32px;
+
+  @include vp-769 {
+    margin-bottom: 24px;
+  }
+}
+
+.callback__btn-checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+
+  @include vp-1023 {
+    align-items: center;
+  }
+
+  @include vp-769 {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+.callback label {
+  margin-right: 5px;
+  margin-left: auto;
+  width: 234px;
+  font-size: 14px;
+  line-height: 15px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-top: 4px;
+    margin-right: 61px;
+  }
+
+  @include vp-769 {
+    margin: 0;
+    margin-left: 31px;
+  }
+}
+
+.callback__btn-checkbox label {
+  position: relative;
+}
+
+.callback__btn-checkbox input:hover + label,
+.callback__btn-checkbox input:focus + label {
+  color: $color-blackpearl;
+}
+
+.callback__btn-checkbox input + label::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -26px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+}
+
+.callback__btn-checkbox input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -24px;
+  width: 8px;
+  height: 5px;
+
+  background: url(..img/sprite/icon-checkbox.svg) no-repeat;
+}
+
+.callback__btn-checkbox input:hover + label::before,
+.callback__btn-checkbox input:focus + label::before,
+.callback__btn-checkbox input + label:hover::before,
+.callback__btn-checkbox input + label:focus:before {
+  border: 1px solid $color-blackpearl;
+  background-color: $color-blackpearl;
+}
+
+.callback__btn {
+  padding: 15px;
+  padding-bottom: 12px;
+  width: 265px;
+  letter-spacing: 0.05em;
+  color: $color-default-white;
+  background-color: $color-blackpearl;
+  border: none;
+
+  @include vp-1023 {
+    padding-top: 16px;
+    padding-bottom: 11px;
+  }
+
+  @include vp-769 {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}

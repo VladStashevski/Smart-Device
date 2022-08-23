@@ -6,6 +6,12 @@
 $color-default-black:               #000000;
 $color-default-white:               #ffffff;
 $color-transparent:                 rgba(255, 255, 255, 0);
+$color-background-blackperl:        #132732;
+$color-silver:                      #c4c4c4;
+$color-tintsofwhisper:              #ebebeb;
+$color-aliceblue:                   #f2f5f6;
+$color-deepskyblue:                 #00b2ff;
+$color-blackpearl:                  #041827;
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
@@ -16,9 +22,15 @@ $color-torch-red:                   #ff1553;
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$color-background-header: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 
 // Typography
 // ---------------------------------
+
+// Fonts
+
+$ff-pt-mono:                        "PT Mono", "Courier", monospace;
+$ff-roboto-condensed:               "Roboto Condensed", "Tahoma", sans-serif;
 
 // переменная используемая в html для подключения скейлинга
 $fz-default:                        16px;
@@ -44,9 +56,15 @@ $trans-600:                         0.6s $tf-default;
 // ---------------------------------
 
 $vp-320:                            320px;
+$vp-321:                            321px;
 $vp-375:                            375px;
 $vp-768:                            768px;
+$vp-769:                            769px;
+$vp-770:                            770px;
+$vp-771:                            771px;
+$vp-1023:                           1023px;
 $vp-1024:                           1024px;
+$vp-1222:                           1222px;
 $vp-1280:                           1280px;
 $vp-1440:                           1440px;
 $vp-1920:                           1920px;

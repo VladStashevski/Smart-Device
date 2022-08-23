@@ -75,6 +75,8 @@ const copy = () => {
     'source/fonts/**',
     'source/img/**',
     'source/favicon/**',
+    "source/*.ico",
+    "source/*.webmanifest"
   ], {
     base: 'source',
   })
@@ -88,7 +90,7 @@ const clean = () => {
 const syncServer = () => {
   server.init({
     server: 'build/',
-    index: 'sitemap.html',
+    index: 'index.html',
     notify: false,
     open: true,
     cors: true,
@@ -123,7 +125,7 @@ const start = gulp.series(build, syncServer);
 // Используйте отличное от дефолтного значение root, если нужно обработать отдельную папку в img,
 // а не все изображения в img во всех папках.
 
-// root = '' - по дефолту webp добавляются и обновляются во всех папках в source/img/
+// root = '' - по дефолту webp добавляются и обналяются во всех папках в source/img/
 // root = 'content/' - webp добавляются и обновляются только в source/img/content/
 
 const createWebp = () => {
