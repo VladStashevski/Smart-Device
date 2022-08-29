@@ -32,7 +32,6 @@
   background-color: $color-default-black;
   opacity: 0.7;
   z-index: 1;
-
 }
 
 .modal__content form {
@@ -44,7 +43,6 @@
   background-color: $color-deepskyblue;
   z-index: 10;
   border-radius: 3px;
-
 }
 
 .modal__content strong {
@@ -128,7 +126,7 @@
 .modal__content-btn-checkbox input + label::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   left: -26px;
   width: 15px;
   height: 15px;
@@ -144,13 +142,13 @@
   width: 8px;
   height: 5px;
 
-  background: url(../img/svg/icon-checkbox.svg) no-repeat;
+  background: url("../img/svg/icon-checkbox.svg") no-repeat;
 }
 
 .modal__content-btn-checkbox input:hover + label::before,
 .modal__content-btn-checkbox input:focus + label::before,
 .modal__content-btn-checkbox input + label:hover::before,
-.modal__content-btn-checkbox input + label:focus:before {
+.modal__content-btn-checkbox input + label:focus::before {
   border: 1px solid $color-blackpearl;
   background-color: $color-blackpearl;
 }
@@ -180,7 +178,7 @@
   }
 }
 
-.modal-advance {
+.modal-success {
   display: none;
 
   &--show {

@@ -226,13 +226,13 @@
   width: 8px;
   height: 5px;
 
-  background: url(../img/svg/icon-checkbox.svg) no-repeat;
+  background: url("../img/svg/icon-checkbox.svg") no-repeat;
 }
 
 .callback__btn-checkbox input:hover + label::before,
 .callback__btn-checkbox input:focus + label::before,
 .callback__btn-checkbox input + label:hover::before,
-.callback__btn-checkbox input + label:focus:before {
+.callback__btn-checkbox input + label:focus::before {
   border: 1px solid $color-blackpearl;
   background-color: $color-blackpearl;
 }

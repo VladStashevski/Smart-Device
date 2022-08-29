@@ -49,9 +49,10 @@
   }
 
   &:hover h3,
-  &:hover svg,
-  &:hover p {
+  &:hover p,
+  &:hover svg {
     color: $color-aliceblue;
+    fill: $color-aliceblue;
     transition: 0.4s ease-out;
   }
 
@@ -118,7 +119,7 @@
 
   @include vp-1023 {
     &--third svg {
-      margin-left: 0px;
+      margin-left: 0;
     }
 
     &--third h3 {
@@ -144,7 +145,7 @@
 .benefits svg {
   width: 35px;
   height: 35px;
-  color: $color-deepskyblue;
+  fill: $color-deepskyblue;
 
   @include vp-769 {
     width: 30px;

@@ -1,3 +1,6 @@
+import {iosVhFix} from './utils/ios-vh-fix';
+import {initModals} from './modules/modals/init-modals';
+import {initFooter} from './modules//modals/footer';
 /* eslint-disable curly */
 
 // ---------------------------------
@@ -13,58 +16,15 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // Аккордеон в футере
-  const accordionFooter = document.querySelectorAll('.accordion-footer');
-  const accordionFooterToggle = document.querySelectorAll('.accordion-footer__toggle');
-  const accordionFooterContents = document.querySelectorAll('.accordion-footer__content');
+  iosVhFix();
 
-  const toggles = Array.from(accordionFooterToggle);
-  toggles.forEach((el) => {
-    el.classList.remove('accordion-footer__toggle--nojs');
+  // Modules
+  // ---------------------------------
+
+  window.addEventListener('load', () => {
+    initModals();
+    initFooter();
   });
-
-  const contents = Array.from(accordionFooterContents);
-  contents.forEach((el) => {
-    el.classList.remove('accordion-footer__content--nojs');
-  });
-
-  const hiddenContent = (btn, content) => {
-    btn.classList.remove('accordion-footer__toggle--active');
-    content.classList.remove('accordion-footer__content--show');
-  };
-
-  const showContent = (btn, content) => {
-    btn.classList.add('accordion-footer__toggle--active');
-    content.classList.add('accordion-footer__content--show');
-  };
-
-  const toggleAccordion = (evt) => {
-    Array.prototype.forEach.call(
-        accordionFooterContents,
-        function (accordionContent) {
-          let btn = accordionContent
-              .closest('.accordion-footer')
-              .querySelector('.accordion-footer__toggle');
-          if (
-            (btn === evt.target &&
-            !btn.classList.contains('accordion-footer__toggle')) ||
-          btn !== evt.target
-          ) {
-            hiddenContent(btn, accordionContent);
-          } else if (btn === evt.target) {
-            showContent(btn, accordionContent);
-          }
-        }
-    );
-  };
-
-  Array.prototype.forEach.call(accordionFooter, function (accordion) {
-    let togglebtn = accordion.querySelector('.accordion-footer__toggle');
-    let accordionContent = accordion.querySelector('.accordion-footer__content');
-    hiddenContent(togglebtn, accordionContent);
-    togglebtn.addEventListener('click', toggleAccordion);
-  });
-
 
   // Показать/скрыть текст блока 'О компании'
   const txtHideDesktop = document.querySelector('.introduction__txt-desk');
@@ -106,7 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let btnСallback = document.querySelector('[data-open-modal]');
 
   let modal = document.querySelector('.modal');
-  let modalAdvance = document.querySelector('.modal-advance');
+  let modalAdvance = document.querySelector('.modal-success');
   let modalOff = document.querySelectorAll('.modal__off');
   let closePopupModal = document.querySelectorAll('.modal__popup');
 
@@ -150,7 +110,7 @@ window.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('click', function (evt) {
       evt.preventDefault();
       modal.classList.remove('modal--show');
-      modalAdvance.classList.remove('modal-advance--show');
+      modalAdvance.classList.remove('modal-success--show');
       onScroll();
     });
   });
@@ -159,7 +119,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (modalLogin.value || modalTel.value) {
       evt.preventDefault();
       modal.classList.remove('modal--show');
-      modalAdvance.classList.add('modal-advance--show');
+      modalAdvance.classList.add('modal-success--show');
     } else {
       if (isStorageSupport) {
         localStorage.setItem('name', modalLogin.value);
@@ -175,8 +135,8 @@ window.addEventListener('DOMContentLoaded', () => {
         onScroll();
       }
 
-      if (modalAdvance.classList.contains('modal-advance--show')) {
-        modalAdvance.classList.remove('modal-advance--show');
+      if (modalAdvance.classList.contains('modal-success--show')) {
+        modalAdvance.classList.remove('modal-success--show');
         onScroll();
       }
     }
@@ -189,8 +149,8 @@ window.addEventListener('DOMContentLoaded', () => {
         onScroll();
       }
 
-      if (modalAdvance.classList.contains('modal-advance--show')) {
-        modalAdvance.classList.remove('modal-advance--show');
+      if (modalAdvance.classList.contains('modal-success--show')) {
+        modalAdvance.classList.remove('modal-success--show');
         onScroll();
       }
     });

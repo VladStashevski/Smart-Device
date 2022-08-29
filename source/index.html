@@ -32,18 +32,14 @@
             </picture>
           </a>
           <div class="page-header__links">
-            <div class="page-header__email">
-              <a href="mailto:info@sd.ru">
+              <a class="page-header__email" href="mailto:info@sd.ru">
                 <svg width="21" height="20"><use xlink:href="img/sprite_auto.svg#icon-email"></use></svg>
-                <p>info@sd.ru</p>
+                <span>info@sd.ru</span>
               </a>
-            </div>
-            <div class="page-header__tel">
-              <a href="tel:84950005252">
+              <a class="page-header__email" href="tel:84950005252">
                 <svg width="21" height="20"><use xlink:href="img/sprite_auto.svg#icon-tel"></use></svg>
-                <p>+7 (495) 000 52 52</p>
+                <span>+7 (495) 000 52 52</span>
               </a>
-            </div>
           </div>
           <a class="btn page-header__btn" href="#" data-open-modal="callback">Заказать звонок</a>
         </div>
@@ -66,42 +62,34 @@
           <h2 class="visually-hidden">Преимущества</h2>
           <div class="container">
             <ul>
-              <li>
-                <div class="benefits__item benefits__item--first">
+              <li class="benefits__item benefits__item--first">
                   <svg width="35" height="35">
                     <use xlink:href="img/sprite_auto.svg#icon-stopwatch"></use>
                   </svg>
                   <h3>Оперативные сроки</h3>
                   <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат&nbsp;и комплектующих в&nbsp;самые короткие сроки</p>
-                </div>
               </li>
-              <li>
-                <div class="benefits__item benefits__item--second">
+              <li class="benefits__item benefits__item--second">
                   <svg width="35" height="35">
                     <use xlink:href="img/sprite_auto.svg#icon-people"></use>
                   </svg>
                   <h3>Крупные поставщики</h3>
                   <p>Нашими поставщиками являются такие крупные мировые компании как: <span>Osram, Cree, Holglitronic, Refond</span>. Сотрудничество с&nbsp;такими компаниями обеспичивает хорошее качество нашей продукции.
                   </p>
-                </div>
               </li>
-              <li>
-                <div class="benefits__item benefits__item--third">
+              <li class="benefits__item benefits__item--third">
                   <svg width="35" height="35">
                     <use xlink:href="img/sprite_auto.svg#icon-spy"></use>
                   </svg>
                   <h3>Полная конфиденциальность</h3>
                   <p>По&nbsp;желанию клиента &ensp;мы обеспечиваем полную конфеденциальность.</p>
-                </div>
               </li>
-              <li>
-                <div class="benefits__item benefits__item--fourth">
+              <li class="benefits__item benefits__item--fourth">
                   <svg width="35" height="35">
                     <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
                   </svg>
                   <h3>Персонализация стоимости</h3>
                   <p>Мы&nbsp;&ensp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая Вас устраивает.</p>
-                </div>
               </li>
             </ul>
           </div>
@@ -216,15 +204,12 @@
       <footer class="page-footer">
         <div class="page-footer__wrapper container">
           <div class="page-footer__logotype-social">
-            <div class="page-footer__logotype">
-            <a href="#">
+            <a class="page-footer__logotype" href="#">
               <svg width="215" height="55" aria-label="Логотип компании">
                 <use xlink:href="img/sprite_auto.svg#logotype"></use>
               </svg>
             </a>
-            </div>
-            <div class="page-footer__social-wrapper">
-              <ul>
+              <ul class="page-footer__social-wrapper">
                 <li>
                   <a href="https://www.facebook.com/htmlacademy">
                     <span class="visually-hidden">Мы в Фейсбуке</span>
@@ -250,7 +235,6 @@
                   </a>
                 </li>
               </ul>
-            </div>
           </div>
 <!-- Footer block -->
           <section class="page-footer__navigation accordion-footer">
@@ -341,7 +325,7 @@
       </div>
     </div>
 
-    <div class="modal modal-advance" data-modal="success">
+    <div class="modal modal-success" data-modal="success">
       <div class="modal__wrapper">
         <div class="modal__popup" data-close-modal></div>
         <div class="modal__success-content">

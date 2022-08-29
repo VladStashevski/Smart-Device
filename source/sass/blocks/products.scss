@@ -13,9 +13,9 @@
 
   @include vp-769 {
     padding-top: 46px;
-    padding-right: 0px;
+    padding-right: 0;
     padding-bottom: 86px;
-    padding-left: 0px;
+    padding-left: 0;
   }
 }
 
@@ -80,6 +80,7 @@
 
 .products li {
   position: relative;
+  background-color: $color-background-blackperl;
 
   &:hover h3,
   &:focus-within h3 {
