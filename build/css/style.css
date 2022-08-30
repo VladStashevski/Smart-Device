@@ -811,6 +811,28 @@ button,
   list-style: none;
 }
 
+.benefits li:hover h3 {
+  color: #f2f5f6;
+  -webkit-transition: 0.4s ease-out;
+  -o-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.benefits li:hover p {
+  color: #f2f5f6;
+  -webkit-transition: 0.4s ease-out;
+  -o-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.benefits li:hover svg {
+  color: #f2f5f6;
+  fill: #f2f5f6;
+  -webkit-transition: 0.4s ease-out;
+  -o-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
 .benefits li {
   padding-top: 40px;
   padding-right: 42px;
@@ -825,16 +847,6 @@ button,
 
 .benefits li:hover {
   background-color: #00b2ff;
-  -webkit-transition: 0.4s ease-out;
-  -o-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
-}
-
-.benefits li:hover h3,
-.benefits li:hover p,
-.benefits li:hover svg {
-  color: #f2f5f6;
-  fill: #f2f5f6;
   -webkit-transition: 0.4s ease-out;
   -o-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
@@ -971,21 +983,24 @@ button,
   list-style: none;
 }
 
-.products li {
-  position: relative;
-  background-color: #132732;
-}
-
 .products li:hover h3,
 .products li:focus-within h3 {
   color: #00b2ff;
 }
 
 .products li:hover img,
-.products li:focus-within img,
+.products li:focus-within img {
+  opacity: 0.5;
+}
+
 .products li:hover button,
 .products li:focus-within button {
   opacity: 0.5;
+}
+
+.products li {
+  position: relative;
+  background-color: #132732;
 }
 
 .products h3 {

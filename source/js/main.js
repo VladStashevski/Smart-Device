@@ -1,6 +1,3 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {initFooter} from './modules//modals/footer';
 /* eslint-disable curly */
 
 // ---------------------------------
@@ -16,14 +13,58 @@ import {initFooter} from './modules//modals/footer';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  iosVhFix();
-
   // Modules
   // ---------------------------------
 
-  window.addEventListener('load', () => {
-    initModals();
-    initFooter();
+  const accordionFooter = document.querySelectorAll('.accordion-footer');
+  const accordionFooterToggle = document.querySelectorAll('.accordion-footer__toggle');
+  const accordionFooterContents = document.querySelectorAll('.accordion-footer__content');
+
+  const toggles = Array.from(accordionFooterToggle);
+  toggles.forEach((el) => {
+    el.classList.remove('accordion-footer__toggle--nojs');
+  });
+
+  const contents = Array.from(accordionFooterContents);
+  contents.forEach((el) => {
+    el.classList.remove('accordion-footer__content--nojs');
+  });
+
+  const hiddenContent = (btn, content) => {
+    btn.classList.remove('accordion-footer__toggle--active');
+    content.classList.remove('accordion-footer__content--show');
+  };
+
+  const showContent = (btn, content) => {
+    btn.classList.add('accordion-footer__toggle--active');
+    content.classList.add('accordion-footer__content--show');
+  };
+
+  const toggleAccordion = (evt) => {
+    Array.prototype.forEach.call(
+        accordionFooterContents,
+        function (accordionContent) {
+          let btn = accordionContent
+              .closest('.accordion-footer')
+              .querySelector('.accordion-footer__toggle');
+          if (
+            (btn === evt.target &&
+            !btn.classList.contains('accordion-footer__toggle')) ||
+          btn !== evt.target
+          ) {
+            hiddenContent(btn, accordionContent);
+          } else if (btn === evt.target) {
+            showContent(btn, accordionContent);
+          }
+        }
+    );
+  };
+
+  Array.prototype.forEach.call(accordionFooter, function (accordion) {
+    let togglebtn = accordion.querySelector('.accordion-footer__toggle');
+    let accordionContent = accordion.querySelector('.accordion-footer__content');
+    hiddenContent(togglebtn, accordionContent);
+    togglebtn.addEventListener('click', toggleAccordion);
   });
 
   // Показать/скрыть текст блока 'О компании'

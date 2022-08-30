@@ -32,6 +32,22 @@
   }
 }
 
+.benefits li:hover h3 {
+  color: $color-aliceblue;
+  transition: 0.4s ease-out;
+}
+
+.benefits li:hover p {
+  color: $color-aliceblue;
+  transition: 0.4s ease-out;
+}
+
+.benefits li:hover svg {
+  color: $color-aliceblue;
+  fill: $color-aliceblue;
+  transition: 0.4s ease-out;
+}
+
 .benefits li {
   padding-top: 40px;
   padding-right: 42px;
@@ -45,14 +61,6 @@
 
   &:hover {
     background-color: $color-deepskyblue;
-    transition: 0.4s ease-out;
-  }
-
-  &:hover h3,
-  &:hover p,
-  &:hover svg {
-    color: $color-aliceblue;
-    fill: $color-aliceblue;
     transition: 0.4s ease-out;
   }
 

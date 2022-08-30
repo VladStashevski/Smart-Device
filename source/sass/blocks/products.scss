@@ -78,21 +78,24 @@
   }
 }
 
+.products li:hover h3,
+.products li:focus-within h3 {
+  color: $color-deepskyblue;
+}
+
+.products li:hover img,
+.products li:focus-within img {
+  opacity: 0.5;
+}
+
+.products li:hover button,
+.products li:focus-within button {
+  opacity: 0.5;
+}
+
 .products li {
   position: relative;
   background-color: $color-background-blackperl;
-
-  &:hover h3,
-  &:focus-within h3 {
-    color: $color-deepskyblue;
-  }
-
-  &:hover img,
-  &:focus-within img,
-  &:hover button,
-  &:focus-within button {
-    opacity: 0.5;
-  }
 
   @include vp-769 {
     &:not(:last-child) {
