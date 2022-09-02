@@ -1,124 +1,133 @@
-.introduction {
-  padding-top: 60px;
-  padding-right: 50px;
-  padding-bottom: 100px;
-  padding-left: 50px;
-  background-color: $color-aliceblue;
-
-  @include vp-1023 {
-    padding: 0;
-    padding-top: 35px;
-    padding-bottom: 80px;
-  }
-
-  @include vp-769 {
-    padding-top: 22px;
-  }
-}
-
-.introduction__wrapper {
+.about {
   display: flex;
-}
-
-.introduction__year {
-  padding-right: 250px;
-  display: block;
-  width: 150px;
-  height: 320px;
-  background-image: url("../img/content/year.png");
-  background-repeat: no-repeat;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/content/year@2x.png");
-    background-size: 150px 320px;
-  }
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 115px;
+  background-color: $color-aliceblue-draker;
 
   @include vp-1023 {
-    margin-top: 4px;
-    margin-left: -4px;
-    padding-right: 179px;
+    margin-bottom: 79px;
   }
 
-  @include vp-769 {
-    display: none;
-  }
-}
-
-.introduction h2 {
-  margin: 0;
-  margin-bottom: 15px;
-  font-family: $ff-roboto-condensed;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 50px;
-  color: $color-blackpearl;
-
-  @include vp-769 {
-    margin-bottom: 13px;
-    font-size: 28px;
-    line-height: 39px;
-  }
-}
-
-.introduction p {
-  margin: 0;
-  margin-bottom: 23px;
-
-  @include vp-769 {
-    margin-bottom: 17px;
-    font-size: 14px;
-    line-height: 19px;
-  }
-}
-
-.introduction__txt-desk {
-  &--hidden {
-    display: none;
+  @include vp-767 {
+    margin-bottom: 81px;
   }
 
-  &--nojs {
-    display: block;
-  }
-}
+  .container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
 
-.introduction__txt-mob {
-  &--hidden {
-    @include vp-769 {
+    &::before {
+      content: "2022";
+      position: absolute;
+      top: 53px;
+      left: -14px;
+      transform: rotate(-90deg);
+
+      color: $color-deepskyblue;
+      background-image: url("../img/content/introduction-background-desktop.png");
+      background-position: 20% -99%;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+
+      font: 700 156.25px/140.6% $ff-roboto-condensed;
+
+      @include retina {
+        background-image: url("../img/content/introduction-background-desktop@2x.png");
+      }
+
+      @include vp-1023 {
+        top: 56px;
+        left: -20px;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    margin: 0 0 43px 251px;
+    padding: 0;
+
+    font: 400 16px/134.4% $ff-pt-mono;
+    color: $color-blackpearl;
+
+    &:first-of-type {
+      margin-bottom: 24px;
+
+      @include vp-767 {
+        margin-bottom: 18px;
+      }
+    }
+
+    @include vp-1023 {
+      margin-left: 175px;
+      margin-bottom: 20px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 14px;
+
+      font-size: 14px;
+      line-height: 136%;
+    }
+
+    &[data-about-text="accordeon-nojs"] {
+      display: block;
+    }
+    &[data-about-text="accordeon"] {
       display: none;
     }
   }
+}
 
-  &--nojs {
-    @include vp-769 {
-      display: block;
-    }
+.about__title {
+  margin: 0 0 15px 251px;
+  padding: 0;
+
+  font: 400 36px/140.6% $ff-roboto-condensed;
+  color: $color-blackpearl;
+
+  @include vp-1023 {
+    margin: 0 0 12px 175px;
+    font: 400 36px/144% $ff-roboto-condensed;
+  }
+
+  @include vp-767 {
+    margin: -3px 0 12px;
+    font-size: 28px;
+    line-height: 140.6%;
   }
 }
 
-.introduction__btn {
-  margin-top: 18px;
-  padding: 14px 12px;
-  min-width: 180px;
-  font-size: 14px;
-  line-height: 16px;
+.about__btn {
+  margin-left: 251px;
+  padding: 14px 50px;
   letter-spacing: 0.05em;
-  color: $color-deepskyblue;
   border: 1px solid $color-deepskyblue;
-  background-color: transparent;
-
-  &:hover,
-  &:focus {
-    color: $color-aliceblue;
-    background-color: $color-deepskyblue;
-  }
+  color: $color-deepskyblue;
+  background-color: $color-aliceblue-draker;
 
   @include vp-1023 {
-    margin-top: -3px;
+    margin-left: 175px;
   }
 
-  @include vp-769 {
-    padding-top: 8px;
-    padding-bottom: 9px;
-    min-width: 160px;
+  @include vp-767 {
+    margin-left: 0;
+    padding: 8px 39px;
+  }
+
+  &--nojs {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $color-deepskyblue;
+    color: $color-aliceblue;
+    transition: 0.4s ease-out;
   }
 }
