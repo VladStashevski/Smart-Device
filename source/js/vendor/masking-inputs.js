@@ -2,7 +2,7 @@
   exportdocument.querySelectorAll('input[type="tel"]'),
   function (input) {
     let keyCode;
-     function mask(event) {
+      function mask(event) {
       // eslint-disable-next-line no-unused-expressions
       event.keyCode && (keyCode = event.keyCode);
       // eslint-disable-next-line no-invalid-this

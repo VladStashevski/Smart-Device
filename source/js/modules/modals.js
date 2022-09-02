@@ -188,4 +188,3 @@ trapFocus(modal);
       input.addEventListener('keydown', mask, false);
     }
 );
-
