@@ -1,7 +1,6 @@
 /* eslint-disable curly */
 import {iosVhFix} from './utils/ios-vh-fix';
 import {swap} from './modules/modals';
-import {breakpoint, breakpointChecker} from './modules/adaptive';
 import {initAboutButton} from './modules/about';
 import {initFooter} from './modules/footer';
 
@@ -25,7 +24,5 @@ window.addEventListener('DOMContentLoaded', () => {
     initAboutButton();
     initFooter();
     swap();
-    breakpointChecker();
-    breakpoint.addListener(breakpointChecker);
   });
 });
