@@ -1399,6 +1399,11 @@ button,
   fill: #ffffff;
 }
 
+.socials__link svg:hover,
+.socials__link svg:focus {
+  fill-opacity: 0.7;
+}
+
 .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1716,11 +1721,6 @@ button,
   .site-sections__link:focus {
     color: #ffffff;
     text-decoration: underline;
-  }
-
-  .socials__link:hover svg,
-  .socials__link:focus svg {
-    fill: #00b2ff;
   }
 
   .contacts__tel:hover,

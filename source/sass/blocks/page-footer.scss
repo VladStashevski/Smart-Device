@@ -250,13 +250,11 @@
   svg {
     fill: $color-default-white;
   }
+}
 
-  @media (hover: hover), screen and (min-width: 0\0) {
-    &:hover svg,
-    &:focus svg {
-      fill: $color-deepskyblue;
-    }
-  }
+.socials__link svg:hover,
+.socials__link svg:focus {
+  fill-opacity: 0.7;
 }
 
 .contacts {
