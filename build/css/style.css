@@ -791,7 +791,7 @@ button,
 
 .benefits {
   padding-top: 120px;
-  padding-bottom: 60px;
+  padding-bottom: 118px;
   padding-right: 50px;
   padding-left: 50px;
   background-color: #f8fdff;
@@ -900,7 +900,7 @@ button,
 
 .about .container {
   position: relative;
-  max-width: 1400px;
+  max-width: 1323px;
   margin: 0 auto;
   padding: 0 50px;
 }
@@ -950,7 +950,7 @@ button,
 
 .about__btn {
   margin-left: 251px;
-  padding: 14px 50px;
+  padding: 12px 45px;
   letter-spacing: 0.05em;
   border: 1px solid #00b2ff;
   color: #00b2ff;
