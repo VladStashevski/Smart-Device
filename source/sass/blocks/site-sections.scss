@@ -64,3 +64,11 @@
     }
   }
 }
+
+.site-sections__list .site-sections__item:last-child {
+  margin-bottom: 50px;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
+}

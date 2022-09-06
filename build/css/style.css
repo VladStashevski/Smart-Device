@@ -1320,6 +1320,10 @@ button,
   outline: none;
 }
 
+.site-sections__list .site-sections__item:last-child {
+  margin-bottom: 50px;
+}
+
 .page-footer {
   background-color: #041827;
 }
@@ -1957,6 +1961,10 @@ button,
     -webkit-column-count: auto;
     -moz-column-count: auto;
     column-count: auto;
+  }
+
+  .site-sections__list .site-sections__item:last-child {
+    margin-bottom: 0;
   }
 
   .page-footer .container {
