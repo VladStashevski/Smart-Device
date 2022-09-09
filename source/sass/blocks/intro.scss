@@ -2,13 +2,13 @@
   padding-top: 304px;
   padding-bottom: 296px;
   background-color: $color-background-blackperl;
-  background-image: url("../img/background/background-main-desktop.png");
+  background-image: url("../img/background/background-main-desktop.webp");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/background/background-main-desktop@2x.png");
+    background-image: url("../img/background/background-main-desktop@2x.webp");
     background-position: center top;
     background-size: cover;
   }
@@ -16,13 +16,13 @@
   @include vp-1023 {
     padding-top: 179px;
     padding-bottom: 221px;
-    background-image: url("../img/background/background-main-tablet.png");
+    background-image: url("../img/background/background-main-tablet.webp");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/background/background-main-tablet@2x.png");
+      background-image: url("../img/background/background-main-tablet@2x.webp");
       background-position: center top;
       background-size: cover;
     }
@@ -31,13 +31,13 @@
   @include vp-769 {
     padding-top: 151px;
     padding-bottom: 189px;
-    background-image: url("../img/background/background-main-mobile.png");
+    background-image: url("../img/background/background-main-mobile.webp");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/background/background-main-mobile@2x.png");
+      background-image: url("../img/background/background-main-mobile@2x.webp");
       background-position: center top;
       background-size: cover;
     }

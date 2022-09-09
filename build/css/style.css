@@ -745,7 +745,7 @@ button,
   padding-top: 304px;
   padding-bottom: 296px;
   background-color: #132732;
-  background-image: url("../img/background/background-main-desktop.png");
+  background-image: url("../img/background/background-main-desktop.webp");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1406,7 +1406,11 @@ button,
 
 .socials__link svg:hover,
 .socials__link svg:focus {
-  fill-opacity: 0.7;
+  fill-opacity: 0.2;
+}
+
+a:focus {
+  fill-opacity: 0.2;
 }
 
 .contacts {
@@ -1788,7 +1792,7 @@ button,
   .intro {
     padding-top: 179px;
     padding-bottom: 221px;
-    background-image: url("../img/background/background-main-tablet.png");
+    background-image: url("../img/background/background-main-tablet.webp");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2017,7 +2021,7 @@ button,
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .intro {
-    background-image: url("../img/background/background-main-tablet@2x.png");
+    background-image: url("../img/background/background-main-tablet@2x.webp");
     background-position: center top;
     background-size: cover;
   }
@@ -2055,7 +2059,7 @@ button,
   .intro {
     padding-top: 151px;
     padding-bottom: 189px;
-    background-image: url("../img/background/background-main-mobile.png");
+    background-image: url("../img/background/background-main-mobile.webp");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2232,7 +2236,7 @@ button,
 
 @media (max-width: 769px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 769px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 769px) and (min-resolution: 144dpi), (max-width: 769px) and (min-resolution: 1.5dppx) {
   .intro {
-    background-image: url("../img/background/background-main-mobile@2x.png");
+    background-image: url("../img/background/background-main-mobile@2x.webp");
     background-position: center top;
     background-size: cover;
   }
@@ -2466,7 +2470,7 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .intro {
-    background-image: url("../img/background/background-main-desktop@2x.png");
+    background-image: url("../img/background/background-main-desktop@2x.webp");
     background-position: center top;
     background-size: cover;
   }
