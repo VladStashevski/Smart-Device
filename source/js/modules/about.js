@@ -1,20 +1,27 @@
-const aboutButton = document.querySelector('.about__btn');
+const txtHideDesktop = document.querySelector('.introduction__txt-desk');
+const txtHideMobile = document.querySelector('.introduction__txt-mob');
+const introductionbtn = document.querySelector('.introduction__btn');
 
-const onAboutButtonClick = () => {
-  const aboutText = document.querySelector('p[data-about-text="accordeon"]');
+txtHideDesktop.classList.remove('introduction__txt-desk--nojs');
+txtHideMobile.classList.remove('introduction__txt-mob--nojs');
 
-  if (aboutText.style.display === '') {
-    aboutText.style.display = 'block';
-    aboutButton.innerHTML = 'свернуть';
+export const readMore = () => {
+  if (txtHideDesktop.classList.contains('introduction__txt-desk--hidden')) {
+    txtHideDesktop.classList.remove('introduction__txt-desk--hidden');
+    introductionbtn.innerHTML = 'Скрыть';
   } else {
-    aboutText.style.display = '';
-    aboutButton.innerHTML = 'подробнее';
+    txtHideDesktop.classList.add('introduction__txt-desk--hidden');
+    introductionbtn.innerHTML = 'Подробнее';
+  }
+
+  if (txtHideMobile.classList.contains('introduction__txt-mob--hidden')) {
+    txtHideMobile.classList.remove('introduction__txt-mob--hidden');
+    introductionbtn.innerHTML = 'Скрыть';
+  } else {
+    txtHideMobile.classList.add('introduction__txt-mob--hidden');
+    introductionbtn.innerHTML = 'Подробнее';
   }
 };
 
-export const initAboutButton = () => {
-  aboutButton.classList.remove('about__btn--nojs');
-  const aboutText = document.querySelector('p[data-about-text="accordeon-nojs"]');
-  aboutText.setAttribute('data-about-text', 'accordeon');
-  aboutButton.addEventListener('click', onAboutButtonClick);
-};
+introductionbtn.addEventListener('click', readMore);
+

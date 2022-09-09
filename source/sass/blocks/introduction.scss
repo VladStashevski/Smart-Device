@@ -1,0 +1,123 @@
+.introduction {
+  padding-right: 50px;
+  padding-bottom: 100px;
+  padding-left: 50px;
+  background-color: $color-aliceblue-draker;
+
+  @include vp-1023 {
+    padding: 0;
+    padding-top: 35px;
+    padding-bottom: 80px;
+  }
+
+  @include vp-769 {
+    padding-top: 22px;
+  }
+}
+
+.introduction__wrapper {
+  display: flex;
+}
+
+.introduction__year {
+  padding-right: 250px;
+  display: block;
+  width: 150px;
+  height: 320px;
+  background-image: url("../img/content/year.webp");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/content/year@2x.webp");
+    background-size: 150px 320px;
+  }
+
+  @include vp-1023 {
+    margin-top: 4px;
+    margin-left: -4px;
+    padding-right: 179px;
+  }
+
+  @include vp-769 {
+    display: none;
+  }
+}
+
+.introduction h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: $ff-roboto-condensed;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 50px;
+  color: $color-blackpearl;
+
+  @include vp-769 {
+    margin-bottom: 13px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.introduction p {
+  margin: 0;
+  margin-bottom: 23px;
+
+  @include vp-769 {
+    margin-bottom: 17px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.introduction__txt-desk {
+  &--hidden {
+    display: none;
+  }
+
+  &--nojs {
+    display: block;
+  }
+}
+
+.introduction__txt-mob {
+  &--hidden {
+    @include vp-769 {
+      display: none;
+    }
+  }
+
+  &--nojs {
+    @include vp-769 {
+      display: block;
+    }
+  }
+}
+
+.introduction__btn {
+  margin-top: 18px;
+  padding: 14px 12px;
+  min-width: 180px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $color-deepskyblue;
+  border: 1px solid $color-deepskyblue;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $color-aliceblue;
+    background-color: $color-deepskyblue;
+  }
+
+  @include vp-1023 {
+    margin-top: -3px;
+  }
+
+  @include vp-769 {
+    padding-top: 8px;
+    padding-bottom: 9px;
+    min-width: 160px;
+  }
+}

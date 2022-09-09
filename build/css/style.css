@@ -895,90 +895,67 @@ button,
   fill: #00b2ff;
 }
 
-.about {
+.introduction {
+  padding-right: 50px;
+  padding-bottom: 100px;
+  padding-left: 50px;
+  background-color: #f8fdff;
+}
+
+.introduction__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  margin-bottom: 115px;
-  background-color: #f8fdff;
 }
 
-.about .container {
-  position: relative;
-  max-width: 1323px;
-  margin: 0 auto;
-  padding: 0 50px;
+.introduction__year {
+  padding-right: 250px;
+  display: block;
+  width: 150px;
+  height: 320px;
+  background-image: url("../img/content/year.webp");
+  background-repeat: no-repeat;
 }
 
-.about .container::before {
-  content: "2022";
-  position: absolute;
-  top: 53px;
-  left: -14px;
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  color: #00b2ff;
-  background-image: url("../img/content/introduction-background-desktop.png");
-  background-position: 20% -99%;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  font: 700 156.25px/140.6% "Roboto Condensed", "Tahoma", sans-serif;
-}
-
-.about p {
-  margin: 0 0 43px 251px;
-  padding: 0;
-  font: 400 16px/134.4% "PT Mono", "Courier", monospace;
+.introduction h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 50px;
   color: #041827;
 }
 
-.about p:first-of-type {
-  margin-bottom: 24px;
+.introduction p {
+  margin: 0;
+  margin-bottom: 23px;
 }
 
-.about p[data-about-text="accordeon-nojs"] {
+.introduction__txt-desk--hidden {
+  display: none;
+}
+
+.introduction__txt-desk--nojs {
   display: block;
 }
 
-.about p[data-about-text="accordeon"] {
-  display: none;
-}
-
-.about__title {
-  margin: 0 0 15px 251px;
-  padding: 0;
-  font: 400 36px/140.6% "Roboto Condensed", "Tahoma", sans-serif;
-  color: #041827;
-}
-
-.about__btn {
-  margin-left: 251px;
-  padding: 12px 45px;
+.introduction__btn {
+  margin-top: 18px;
+  padding: 14px 12px;
+  min-width: 180px;
+  font-size: 14px;
+  line-height: 16px;
   letter-spacing: 0.05em;
-  border: 1px solid #00b2ff;
   color: #00b2ff;
-  background-color: #f8fdff;
+  border: 1px solid #00b2ff;
+  background-color: transparent;
 }
 
-.about__btn--nojs {
-  display: none;
-}
-
-.about__btn:hover {
-  background-color: #00b2ff;
+.introduction__btn:hover,
+.introduction__btn:focus {
   color: #f2f5f6;
-  -webkit-transition: 0.4s ease-out;
-  -o-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
+  background-color: #00b2ff;
 }
 
 .services {
@@ -1337,7 +1314,7 @@ button,
 }
 
 .site-sections__title {
-  margin: 0 0 22px;
+  margin: 0 0 23px;
   padding: 0;
   font: 400 15px/16px "Roboto Condensed", "Tahoma", sans-serif;
   color: #ffffff;
@@ -1361,7 +1338,7 @@ button,
 
 .site-sections__item {
   width: 220px;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .site-sections__link {
@@ -1379,7 +1356,7 @@ button,
 }
 
 .page-footer .container {
-  padding-top: 55px;
+  padding-top: 57px;
   padding-bottom: 44px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1452,6 +1429,7 @@ button,
 .socials__link svg {
   fill: #ffffff;
   margin-left: 17px;
+  padding: -40px;
 }
 
 .socials__link svg:hover,
@@ -1496,13 +1474,13 @@ a:focus {
 }
 
 .contacts__address {
-  margin-bottom: 11px;
+  margin-bottom: 10px;
   color: rgba(255, 255, 255, 0.7);
   font-style: normal;
 }
 
 .contacts__tel {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   color: rgba(255, 255, 255, 0.7);
   font-style: normal;
   outline: none;
@@ -1895,27 +1873,20 @@ a:focus {
     padding-top: 4px;
   }
 
-  .about {
-    margin-bottom: 79px;
+  .introduction {
+    padding: 0;
+    padding-top: 35px;
+    padding-bottom: 80px;
   }
 
-  .about .container::before {
-    top: 56px;
-    left: -20px;
+  .introduction__year {
+    margin-top: 4px;
+    margin-left: -4px;
+    padding-right: 179px;
   }
 
-  .about p {
-    margin-left: 175px;
-    margin-bottom: 20px;
-  }
-
-  .about__title {
-    margin: 0 0 12px 175px;
-    font: 400 36px/144% "Roboto Condensed", "Tahoma", sans-serif;
-  }
-
-  .about__btn {
-    margin-left: 175px;
+  .introduction__btn {
+    margin-top: -3px;
   }
 
   .services {
@@ -2044,7 +2015,7 @@ a:focus {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
     margin-right: 0;
   }
 
@@ -2056,6 +2027,7 @@ a:focus {
 
   .page-footer__socials {
     margin-top: 5px;
+    margin-right: 17px;
   }
 
   .page-footer__site-sections {
@@ -2188,6 +2160,40 @@ a:focus {
     height: 30px;
   }
 
+  .introduction {
+    padding-top: 22px;
+  }
+
+  .introduction__year {
+    display: none;
+  }
+
+  .introduction h2 {
+    margin-bottom: 13px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .introduction p {
+    margin-bottom: 17px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .introduction__txt-mob--hidden {
+    display: none;
+  }
+
+  .introduction__txt-mob--nojs {
+    display: block;
+  }
+
+  .introduction__btn {
+    padding-top: 8px;
+    padding-bottom: 9px;
+    min-width: 160px;
+  }
+
   .services {
     padding-top: 46px;
     padding-bottom: 85px;
@@ -2292,35 +2298,6 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .about {
-    margin-bottom: 81px;
-  }
-
-  .about .container::before {
-    display: none;
-  }
-
-  .about p:first-of-type {
-    margin-bottom: 18px;
-  }
-
-  .about p {
-    margin: 0 0 14px;
-    font-size: 14px;
-    line-height: 136%;
-  }
-
-  .about__title {
-    margin: -3px 0 12px;
-    font-size: 28px;
-    line-height: 140.6%;
-  }
-
-  .about__btn {
-    margin-left: 0;
-    padding: 8px 39px;
-  }
-
   .site-sections__title {
     margin-bottom: 0;
     padding: 22px 25px 21px;
@@ -2352,7 +2329,7 @@ a:focus {
   }
 
   .page-footer__logo {
-    margin: 0 auto 20px;
+    margin: 0 auto 16px;
     position: relative;
     left: -3px;
   }
@@ -2361,6 +2338,7 @@ a:focus {
     margin: 0 auto;
     position: relative;
     left: 2px;
+    padding-right: 30px;
   }
 
   .page-footer__site-sections {
@@ -2485,7 +2463,7 @@ a:focus {
 
   .contacts__address {
     font: 400 14px/135% "PT Mono", "Courier", monospace;
-    margin-bottom: 22px;
+    margin-bottom: 17px;
   }
 
   .contacts__tel {
@@ -2515,7 +2493,8 @@ a:focus {
     background-size: cover;
   }
 
-  .about .container::before {
-    background-image: url("../img/content/introduction-background-desktop@2x.png");
+  .introduction__year {
+    background-image: url("../img/content/year@2x.webp");
+    background-size: 150px 320px;
   }
 }
