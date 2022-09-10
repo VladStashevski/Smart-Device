@@ -1386,6 +1386,7 @@ button,
 .page-footer__logo {
   margin-top: -5px;
   margin-bottom: 30px;
+  margin-left: 3px;
 }
 
 .page-footer__logo img {
