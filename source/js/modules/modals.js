@@ -102,7 +102,7 @@ closePopupModal.forEach((el) => {
 // trapFocus
 
 function trapFocus(element) {
-  let focusableEls = element.querySelectorAll('input[type="text"], input[type="tel"], textarea,  input[type="checkbox"], btn');
+  let focusableEls = element.querySelectorAll('input[type="text"], input[type="tel"], textarea,  input[type="checkbox"], button');
   let firstFocusableEl = focusableEls[0];
   let lastFocusableEl = focusableEls[focusableEls.length - 1];
   let KEYCODE_TAB = 9;

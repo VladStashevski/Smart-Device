@@ -1,6 +1,8 @@
 .services {
   padding-top: 68px;
   padding-bottom: 140px;
+  padding-left: 50px;
+  padding-right: 50px;
   background-color: $color-blackpearl;
 
   @include vp-1023 {

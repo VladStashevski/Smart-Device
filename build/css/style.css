@@ -716,7 +716,7 @@ button,
   margin-right: 60px;
   padding-top: 11px;
   padding-bottom: 12px;
-  width: 160px;
+  min-width: 160px;
   font-style: 14px;
   line-height: 16px;
   letter-spacing: 0.05px;
@@ -962,6 +962,8 @@ button,
 .services {
   padding-top: 68px;
   padding-bottom: 140px;
+  padding-left: 50px;
+  padding-right: 50px;
   background-color: #041827;
 }
 
@@ -1353,6 +1355,8 @@ button,
 }
 
 .page-footer {
+  padding-right: 50px;
+  padding-left: 50px;
   background-color: #041827;
 }
 
